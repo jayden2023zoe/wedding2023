@@ -1,0 +1,34 @@
+.post-photo>.swiper-initialized {
+  height: 100%;
+  width: 100%;
+  background: #000000;
+
+  swiper-slide {
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: #ffffff !important;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+:root {
+  // --swiper-navigation-size:20px;
+  // --swiper-theme-color: #ffffff!important;
+  // --swiper-pagination-bullet-inactive-color: #ffffff!important;
+  // --swiper-navigation-size: 20px!important;
+}

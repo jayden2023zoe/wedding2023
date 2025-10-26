@@ -1,0 +1,133 @@
+.Web {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffe9d0;
+  font-family: 'Noto Sans', sans  -serif;
+
+  .background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .background-right {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+  }
+
+  .section {
+
+    height: 90vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+    .media {
+      max-width: 50vw;
+      max-height: 50vw;
+      min-width: 600px;
+      min-height: 600px;
+      z-index: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .content,
+      .out-line {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .content {
+        border-radius: 50%;
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // background-image: linear-gradient(to bottom left, #cc3a3a, #ffe9d0, #ffe9d0);
+
+      .target-date {
+        color: #ffffff;
+        font-size: 50px;
+        justify-content: center;
+        display: flex;
+        font-style: italic;
+      }
+
+      .count-down {
+        color: #cc3a3a;
+        font-size: 30px;
+      }
+
+      .name-context {
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .name {
+          background-color: #cc3a3a;
+          width: 150px;
+          height: 150px;
+          font-size: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          
+          // border-radius: 50%;
+          // box-shadow:  5px 5px 20px 30px #cc3a3a;
+        }
+
+        .shake {
+          animation: shake 3s;
+          animation-iteration-count: infinite;
+        }
+        
+        @keyframes shake {
+          0% { transform: rotate(0); }
+          1% { transform: rotate(10deg); }
+          2% { transform: rotate(-10deg); }
+          3% { transform: rotate(10deg); }
+          4% { transform: rotate(-10deg); }
+          5%  { transform: rotate(0); }
+        }
+
+        .happy {
+          color: #cc3a3a;
+          font-size: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 300px;
+          height: 300px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

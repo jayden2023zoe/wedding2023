@@ -1,0 +1,248 @@
+.Header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 44px;
+
+  &.mobile {
+    margin-bottom: 0;
+  }
+
+  .start-btn {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 0 10px;
+    background: #57d6fd;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #13abda;
+    }
+  }
+
+  .photo-area {
+    flex: 1;
+    margin-right: 30px;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &.mobile {
+      flex: 0;
+      justify-content: initial;
+      margin-right: 0;
+      padding: 5px 10px 5px 10px;
+      height: 80px;
+    }
+
+    .photo-frame {
+      width: 185px;
+      height: 185px;
+
+      &.mobile {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .info-area {
+    flex: 2;
+    padding: 5px 0;
+
+    &.mobile {
+      display: flex;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      font-size: 25px;
+      padding-bottom: 20px;
+
+      .wedding-info {
+        font-size: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #ff7474;
+
+        a {
+          padding-left: 10px;
+          color: #ff7474;
+        }
+      }
+
+      &.bio {
+        font-size: 16px;
+      }
+
+      &.hide-mobile {
+        display: none;
+      }
+
+      &.show-web {
+        display: none;
+      }
+
+      &.show-mobile {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        padding-bottom: 0;
+      }
+
+      .count-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        padding: 0 20px;
+
+        &.web {
+          font-size: 25px;
+          padding: 0 40px 0 0;
+        }
+
+        .title {
+          // font-weight: bold;
+        }
+
+        .number {
+          font-weight: bold;
+          padding-bottom: 2px;
+        }
+      }
+
+      &.account {
+        justify-content: space-between;
+
+        .account-title {
+          width: 270px;
+          height: 30px;
+
+          .account-outer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .account-outer-back {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+
+            .account-outer-text {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              padding-left: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      .regist-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: .98rem;
+        // font-weight: 600;
+        padding: 0 16px;
+        background: #fd5656;
+        color: #ffffff;
+        height: 35px;
+        animation: alarm 3s;
+        animation-iteration-count: infinite;
+
+        .regist-date {
+          padding: 0 5px;
+        }
+
+        .regist-time {
+          font-size: 70%;
+          font-style: italic;
+          padding-top: 5px;
+        }
+
+        &:hover {
+          background: #bd2a2ad3;
+        }
+      }
+    }
+  }
+
+  .shake {
+    animation: shake 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(0);
+    }
+
+    1% {
+      transform: rotate(10deg);
+    }
+
+    2% {
+      transform: rotate(-10deg);
+    }
+
+    3% {
+      transform: rotate(10deg);
+    }
+
+    4% {
+      transform: rotate(-10deg);
+    }
+
+    5% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes alarm {
+    0% {
+      background-color: #a71212;
+    }
+
+    2% {
+      background-color: #a71212;
+    }
+
+    3% {
+      background-color: #fd5656;
+    }
+
+    4% {
+      background-color: #fd5656;
+    }
+
+    5% {
+      background-color: #a71212;
+    }
+
+    7% {
+      background-color: #a71212;
+    }
+
+    8% {
+      background-color: #fd5656;
+    }
+
+    100% {
+      background-color: #fd5656;
+    }
+  }
+}

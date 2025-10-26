@@ -1,0 +1,213 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        padding: 30px;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .form-frame {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 70vw;
+        min-width: 70vw;
+        height: 90vh;
+        border-radius: 10px;
+        padding: 20px 50px;
+        overflow: auto;
+        background-size: cover;
+        // background: #ffffff;
+
+        &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: white;
+            border: 1px solid slategrey;
+        }
+
+        .form-content {
+            z-index: 1;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            // overflow: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+
+            .cover {
+                height: 400px;
+                width: 100%;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                -webkit-transition: background-size .5s ease;
+                transition: background-size .5s ease;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+
+                .cover-bio {
+                    padding: 40px 0;
+                    position: relative;
+
+                    .cover-bio-background {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, #edebec 10%, #ff090900 90%);
+                        bottom: 0;
+                    }
+
+                    .cover-bio-text {
+                        z-index: 1;
+                        position: absolute;
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .cover:hover {
+                background-size: 120%;
+            }
+
+            .items {
+                .about{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    line-height: 170%;
+                    padding-bottom: 15px;
+                    // border-bottom: 1px dotted #fa7c7c;
+                  }
+                // overflow: auto;
+                // flex: 2;
+
+                .form-item {
+                    display: flex;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+                    padding: 15px;
+                    // background: #ffffff;
+
+                    .title {
+                        width: 300px;
+
+                        &.required:after {
+                            content: " *";
+                            color: red;
+                        }
+                    }
+
+                    .value {
+
+                        input,
+                        select {
+                            padding: 10px;
+                            font-size: 15px;
+                            border: 1px solid gray;
+                            border-radius: 5px;
+                        }
+
+                        .tip {
+                            border: 2px solid #fcaaaa;
+                        }
+                    }
+
+                    .btn {
+                        display: flex;
+                        flex: 1;
+                        padding: 5px;
+                        justify-content: center;
+                        border-radius: 5px;
+                        background-color: #dadada;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #adadad;
+                        }
+                    }
+
+                    textarea {
+                        display: flex;
+                        font-size: 15px;
+                        flex: 1;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        .success-mask {
+            position: fixed;
+            top: 0;
+            display: none;
+            max-width: 80vw;
+            min-width: 80vw;
+            height: 100%;
+            z-index: 2;
+
+            &.show {
+                display: flex;
+            }
+
+            .success-mask-background {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #000000;
+                opacity: 0.7;
+            }
+
+            .success-mask-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                color: #fa7c7c;
+                z-index: 3;
+                padding: 40px;
+
+                .success-info{
+                    background: #ffffff;
+                    padding: 40px;
+                    border-radius: 5px;
+
+                    .title{
+                        color:#7a7a7a;
+                        font-size: 120%;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .form-background {
+            top: 0;
+            position: absolute;
+            background: #ffffff;
+            opacity: 20%;
+            width: 100%;
+        }
+    }
+
+}

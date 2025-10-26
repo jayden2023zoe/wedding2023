@@ -1,0 +1,39 @@
+.fix-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 3;
+  border-bottom: 1.5px solid #e7e7e7;
+
+  .fix-header-content {
+    width: 950px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      width: 33%;
+      margin: 0 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .wedding-date {
+      width: 22%;
+      max-width: 120px;
+      margin: 0 10px;
+      text-align: right;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
