@@ -1,0 +1,34 @@
+__pycache__
+server/tempUploadFiles
+
+# dependencies
+/client/node_modules
+/.pnp
+.pnp.js
+client/yarn.lock
+/mongodb
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode
+package-lock.json
+client/package-lock.json
+/node_modules
+.idea/
+
+server/settings.py
